@@ -27,7 +27,7 @@ export const projects: Project[] = [
   title: "Vaartha Digital",
   category: "WordPress",
   year: "2026",
-  image: "https://udaykumarportfolio.netlify.app/static/media/vaartha.d94550b9028e664abdd7.png",
+  image: "/vaartha.png",
   client: "Vaartha Publications",
   duration: "Ongoing",
   role: "WordPress & React Native Developer",
@@ -81,8 +81,7 @@ export const projects: Project[] = [
     title: "Restorn",
     category: "React",
     year: "2025",
-    image:
-      "https://udaykumarportfolio.netlify.app/static/media/restornlogo.3f7ac3db43bcaadf1328.png",
+    image: "/restornlogo.png",
     client: "Restaurant Brand Concept",
     duration: "6 Weeks",
     role: "Frontend Developer",
