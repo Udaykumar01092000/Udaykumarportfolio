@@ -1,0 +1,212 @@
+@import "tailwindcss";
+
+:root {
+  --page-background: #05020d;
+  --hero-section-background: #05020d;
+  --surface-base: #0f071b;
+  --surface-elevated: rgba(16, 9, 31, 0.78);
+  --section-card-shadow: 0 16px 40px rgba(8, 5, 18, 0.2);
+  --section-accent-shadow: 0 18px 46px rgba(135, 80, 247, 0.16);
+  --section-accent-surface: linear-gradient(
+    180deg,
+    rgba(135, 80, 247, 0.16),
+    rgba(42, 20, 84, 0.1)
+  );
+  --portfolio-filter-background: rgba(16, 9, 31, 0.78);
+  --skills-card-surface: rgba(24, 15, 43, 0.96);
+  --skills-card-border: rgba(255, 255, 255, 0.1);
+  --chatbot-surface: #0f0a1a;
+  --chatbot-border: rgba(255, 255, 255, 0.1);
+  --chatbot-bot-bubble: rgba(255, 255, 255, 0.1);
+  --chatbot-bot-text: rgba(255, 255, 255, 0.9);
+  --chatbot-input-background: rgba(255, 255, 255, 0.1);
+  --chatbot-input-text: #f6f3ff;
+  --chatbot-input-placeholder: rgba(255, 255, 255, 0.4);
+  --portfolio-preview-shell: rgba(8, 5, 18, 0.78);
+  --portfolio-chip-surface: rgba(255, 255, 255, 0.08);
+  --contact-input-border: rgba(255, 255, 255, 0.2);
+  --contact-input-background: rgba(255, 255, 255, 0.05);
+  --contact-input-placeholder: rgba(255, 255, 255, 0.5);
+  --contact-input-option-background: #120a20;
+  --contact-input-option-foreground: #f6f3ff;
+  --timeline-line: rgba(135, 80, 247, 0.28);
+  --timeline-node-ring: #05020d;
+  --foreground: #f6f3ff;
+  --muted-foreground: #b3abc8;
+  --hero-kicker: #f6f3ff;
+  --hero-copy: rgba(246, 243, 255, 0.76);
+  --hero-stroke: rgba(135, 80, 247, 0.24);
+  --hero-stroke-width: 1.5px;
+  --hero-stroke-width-mobile: 1px;
+  --hero-ghost-fill: rgba(135, 80, 247, 0.08);
+  --hero-frame: rgba(135, 80, 247, 0.48);
+  --hero-card-background: #0b0615;
+  --hero-action-background: rgba(15, 7, 27, 0.88);
+  --hero-action-border: rgba(135, 80, 247, 0.52);
+  --hero-action-shadow: 0 18px 48px rgba(5, 2, 13, 0.28);
+  --hero-tooltip-background: rgba(15, 7, 27, 0.98);
+  --hero-tooltip-border: rgba(135, 80, 247, 0.4);
+  --hero-tooltip-text: #f6f3ff;
+  --hero-tooltip-shadow: 0 18px 44px rgba(5, 2, 13, 0.28);
+  --scrollbar-track: #140c1c;
+  --scrollbar-thumb: #8750f7;
+  --scrollbar-thumb-hover: #a679ff;
+  --header-surface: #0d0618;
+  --header-sticky-background: #0d0618;
+  --header-sticky-shadow: 0 18px 48px rgba(5, 2, 13, 0.28);
+  --header-border: rgba(255, 255, 255, 0.08);
+  --header-ring: rgba(255, 255, 255, 0.1);
+  --toggle-border: rgba(255, 255, 255, 0.12);
+  --scroll-top-progress-track: rgba(255, 255, 255, 0.12);
+  --scroll-top-progress-fill: #9d72ff;
+  --scroll-top-progress-glow: rgba(135, 80, 247, 0.3);
+  --mobile-menu-bg: #120a20;
+  --accent: #8750f7;
+  --accent-gradient: linear-gradient(90deg, #8750f7 0%, #2a1454 100%);
+}
+
+html[data-theme="light"] {
+  --page-background: #f3effd;
+  --hero-section-background: #f8f5ff;
+  --surface-base: #ffffff;
+  --surface-elevated: #ffffff;
+  --section-card-shadow: 0 16px 36px rgba(135, 80, 247, 0.08);
+  --section-accent-shadow: 0 18px 42px rgba(135, 80, 247, 0.12);
+  --section-accent-surface: linear-gradient(
+    180deg,
+    rgba(135, 80, 247, 0.1),
+    rgba(255, 255, 255, 0.92)
+  );
+  --portfolio-filter-background: rgb(246 243 252 / var(--tw-bg-opacity, 1));
+  --skills-card-surface: #ffffff;
+  --skills-card-border: transparent;
+  --chatbot-surface: rgb(246 243 252 / var(--tw-bg-opacity, 1));
+  --chatbot-border: rgba(135, 80, 247, 0.16);
+  --chatbot-bot-bubble: rgba(135, 80, 247, 0.1);
+  --chatbot-bot-text: #2a1454;
+  --chatbot-input-background: rgba(255, 255, 255, 0.8);
+  --chatbot-input-text: #140c1c;
+  --chatbot-input-placeholder: rgba(20, 12, 28, 0.45);
+  --portfolio-preview-shell: rgba(23, 15, 43, 0.82);
+  --portfolio-chip-surface: rgba(135, 80, 247, 0.08);
+  --contact-input-border: rgba(42, 20, 84, 0.28);
+  --contact-input-background: rgba(255, 255, 255, 0.72);
+  --contact-input-placeholder: rgba(20, 12, 28, 0.55);
+  --contact-input-option-background: #ffffff;
+  --contact-input-option-foreground: #140c1c;
+  --timeline-line: rgba(135, 80, 247, 0.22);
+  --timeline-node-ring: #f3effd;
+  --foreground: #140c1c;
+  --muted-foreground: #5d5569;
+  --hero-kicker: #2a1454;
+  --hero-copy: rgba(20, 12, 28, 0.8);
+  --hero-stroke: rgba(135, 80, 247, 0.18);
+  --hero-stroke-width: 2.4px;
+  --hero-stroke-width-mobile: 1.7px;
+  --hero-ghost-fill: rgba(135, 80, 247, 0.05);
+  --hero-frame: rgba(42, 20, 84, 0.55);
+  --hero-card-background: #ffffff;
+  --hero-action-background: #ffffff;
+  --hero-action-border: rgba(135, 80, 247, 0.34);
+  --hero-action-shadow: 0 18px 44px rgba(42, 20, 84, 0.1);
+  --hero-tooltip-background: #ffffff;
+  --hero-tooltip-border: rgba(135, 80, 247, 0.26);
+  --hero-tooltip-text: #140c1c;
+  --hero-tooltip-shadow: 0 16px 38px rgba(42, 20, 84, 0.12);
+  --scrollbar-track: #ece2ff;
+  --scrollbar-thumb: #8750f7;
+  --scrollbar-thumb-hover: #6d38df;
+  --header-surface: #ffffff;
+  --header-sticky-background: #ffffff;
+  --header-sticky-shadow: 0 18px 40px rgba(135, 80, 247, 0.12);
+  --header-border: rgba(135, 80, 247, 0.12);
+  --header-ring: rgba(135, 80, 247, 0.18);
+  --toggle-border: rgba(135, 80, 247, 0.18);
+  --scroll-top-progress-track: rgba(42, 20, 84, 0.14);
+  --scroll-top-progress-fill: #8750f7;
+  --scroll-top-progress-glow: rgba(135, 80, 247, 0.18);
+  --mobile-menu-bg: #ffffff;
+}
+
+@theme inline {
+  --color-background: var(--page-background);
+  --color-foreground: var(--foreground);
+  --font-sans: "Segoe UI";
+  --font-mono: "Consolas";
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  min-height: 100%;
+  overflow-x: clip;
+  scroll-behavior: smooth;
+  scrollbar-color: var(--scrollbar-thumb) var(--scrollbar-track);
+  scrollbar-width: auto;
+}
+
+body {
+  min-height: 100vh;
+  margin: 0;
+  overflow-x: clip;
+  overflow-y: auto;
+  background:
+    radial-gradient(circle at top, rgba(135, 80, 247, 0.16), transparent 32%),
+    linear-gradient(180deg, rgba(255, 255, 255, 0.02), transparent 28%),
+    var(--page-background);
+  color: var(--foreground);
+  font-family: "Segoe UI", Arial, Helvetica, sans-serif;
+  transition:
+    background-color 0.3s ease,
+    color 0.3s ease;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+button {
+  font: inherit;
+}
+
+::selection {
+  background: rgba(135, 80, 247, 0.35);
+  color: var(--foreground);
+}
+
+html,
+body,
+* {
+  scrollbar-color: var(--scrollbar-thumb) var(--scrollbar-track);
+  scrollbar-width: auto;
+}
+
+html::-webkit-scrollbar,
+body::-webkit-scrollbar,
+*::-webkit-scrollbar {
+  width: 14px;
+  height: 14px;
+}
+
+html::-webkit-scrollbar-track,
+body::-webkit-scrollbar-track,
+*::-webkit-scrollbar-track {
+  background: var(--scrollbar-track);
+}
+
+html::-webkit-scrollbar-thumb,
+body::-webkit-scrollbar-thumb,
+*::-webkit-scrollbar-thumb {
+  background: var(--scrollbar-thumb);
+  border: 3px solid var(--scrollbar-track);
+  border-radius: 999px;
+}
+
+html::-webkit-scrollbar-thumb:hover,
+body::-webkit-scrollbar-thumb:hover,
+*::-webkit-scrollbar-thumb:hover {
+  background: var(--scrollbar-thumb-hover);
+}

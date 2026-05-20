@@ -1,0 +1,17 @@
+<svg width="1200" height="760" viewBox="0 0 1200 760" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="1200" height="760" rx="48" fill="#12091F"/>
+  <rect x="42" y="42" width="1116" height="676" rx="34" fill="url(#paint0_linear)"/>
+  <rect x="108" y="114" width="984" height="84" rx="24" fill="rgba(255,255,255,0.16)"/>
+  <rect x="108" y="234" width="590" height="308" rx="28" fill="rgba(255,255,255,0.18)"/>
+  <rect x="730" y="234" width="362" height="142" rx="28" fill="rgba(255,255,255,0.14)"/>
+  <rect x="730" y="400" width="362" height="142" rx="28" fill="rgba(255,255,255,0.12)"/>
+  <rect x="108" y="580" width="984" height="70" rx="24" fill="rgba(255,255,255,0.14)"/>
+  <text x="108" y="95" fill="#EDE7FF" font-family="Segoe UI, Arial, sans-serif" font-size="40" font-weight="700">Vaartha Digital Newsroom</text>
+  <text x="108" y="160" fill="#F7F2FF" font-family="Segoe UI, Arial, sans-serif" font-size="72" font-weight="800">Editorial Publishing UI</text>
+  <defs>
+    <linearGradient id="paint0_linear" x1="42" y1="42" x2="1158" y2="718" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#8750F7"/>
+      <stop offset="1" stop-color="#2A1454"/>
+    </linearGradient>
+  </defs>
+</svg>

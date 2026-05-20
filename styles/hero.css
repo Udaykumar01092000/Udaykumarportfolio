@@ -1,0 +1,217 @@
+.hero-social {
+  position: relative;
+  width: 42px;
+  height: 42px;
+  border: 1px solid var(--hero-action-border);
+  border-radius: 999px;
+  color: #8750f7;
+  background: var(--hero-action-background);
+  box-shadow: var(--hero-action-shadow);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease;
+}
+
+.hero-social:hover {
+  background: #8750f7;
+  color: #fff;
+  transform: translateY(-4px);
+}
+
+.download-icon {
+  transition: opacity 0.25s ease;
+}
+
+.download-cta:hover .download-icon,
+.download-cta:focus-visible .download-icon {
+  animation: download-drop 0.95s ease-in-out infinite;
+}
+
+.download-cta {
+  white-space: nowrap;
+}
+
+.hero-title {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+  font-size: clamp(2.7rem, 5.5vw, 4.9rem);
+  font-weight: 800;
+  letter-spacing: -0.04em;
+  line-height: 1.06;
+}
+
+.hero-title-line {
+  display: block;
+}
+
+.hero-title-subline {
+  font-size: 0.82em;
+  font-weight: 700;
+  white-space: nowrap;
+}
+
+.hero-title-name {
+  background: linear-gradient(90deg, #8750f7 0%, #2a1454 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+.hero-typing {
+  display: inline-block;
+  width: 13ch;
+  overflow: hidden;
+  white-space: nowrap;
+  vertical-align: bottom;
+  border-right: 2px solid var(--hero-kicker);
+  animation:
+    hero-typing 3.3s steps(13) infinite alternate,
+    hero-caret 0.75s step-end infinite;
+}
+
+.hero-tooltip {
+  position: absolute;
+  left: 50%;
+  bottom: calc(100% + 12px);
+  transform: translateX(-50%) translateY(10px) scale(0.94);
+  opacity: 0;
+  pointer-events: none;
+  white-space: nowrap;
+  padding: 0.5rem 0.8rem;
+  border: 1px solid var(--hero-tooltip-border);
+  border-radius: 999px;
+  background: var(--hero-tooltip-background);
+  box-shadow: var(--hero-tooltip-shadow);
+  color: var(--hero-tooltip-text);
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  line-height: 1;
+  text-transform: uppercase;
+  transition:
+    opacity 0.28s ease,
+    transform 0.28s ease;
+}
+
+.hero-tooltip::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  top: 100%;
+  width: 12px;
+  height: 12px;
+  transform: translateX(-50%) rotate(45deg);
+  border-right: 1px solid var(--hero-tooltip-border);
+  border-bottom: 1px solid var(--hero-tooltip-border);
+  background: var(--hero-tooltip-background);
+}
+
+.hero-social:hover .hero-tooltip,
+.hero-social:focus-visible .hero-tooltip {
+  opacity: 1;
+  transform: translateX(-50%) translateY(0) scale(1);
+}
+
+.hero-watermark {
+  color: transparent;
+  font-size: clamp(7rem, 22vw, 17rem);
+  font-weight: 800;
+  letter-spacing: -0.1em;
+  line-height: 0.85;
+  text-transform: uppercase;
+  -webkit-text-fill-color: transparent;
+  -webkit-text-stroke: var(--hero-stroke-width) var(--hero-stroke);
+  text-shadow: 0 0 30px rgba(135, 80, 247, 0.08);
+}
+
+@keyframes download-drop {
+  0% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  35% {
+    opacity: 1;
+    transform: translateY(5px);
+  }
+
+  55% {
+    opacity: 0;
+    transform: translateY(11px);
+  }
+
+  56% {
+    opacity: 0;
+    transform: translateY(-6px);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes hero-typing {
+  0%,
+  12% {
+    width: 0;
+  }
+
+  55%,
+  72% {
+    width: 13ch;
+  }
+
+  100% {
+    width: 0;
+  }
+}
+
+@keyframes hero-caret {
+  0%,
+  49% {
+    border-right-color: var(--hero-kicker);
+  }
+
+  50%,
+  100% {
+    border-right-color: transparent;
+  }
+}
+
+@media (max-width: 767px) {
+  .hero-tooltip {
+    display: none;
+  }
+
+  .hero-actions {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1rem;
+  }
+
+  .hero-social-row {
+    flex-wrap: nowrap;
+  }
+
+  .hero-title {
+    font-size: clamp(2.3rem, 10vw, 3.3rem);
+    line-height: 1.08;
+  }
+
+  .hero-title-subline {
+    font-size: 0.76em;
+    padding-top: 0.3rem;
+  }
+
+  .hero-typing {
+    width: 13ch;
+  }
+
+  .hero-watermark {
+    font-size: clamp(4.5rem, 28vw, 6.5rem);
+    -webkit-text-stroke-width: var(--hero-stroke-width-mobile);
+  }
+}

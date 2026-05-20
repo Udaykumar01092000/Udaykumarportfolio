@@ -1,0 +1,42 @@
+.contact-input {
+  width: 100%;
+  border: 1px solid var(--contact-input-border);
+  border-radius: 10px;
+  background: var(--contact-input-background);
+  padding: 15px 18px;
+  color: var(--foreground);
+  outline: none;
+  box-shadow: 0 0 0 1px var(--contact-input-border);
+  transition: all 0.3s ease;
+}
+
+.contact-input::placeholder {
+  color: var(--contact-input-placeholder);
+}
+
+.contact-input:hover {
+  border-color: rgba(135, 80, 247, 0.42);
+}
+
+.contact-input:focus {
+  border-color: #8750f7;
+  box-shadow: 0 0 0 4px rgba(135, 80, 247, 0.12);
+}
+
+.contact-input:disabled {
+  cursor: not-allowed;
+  opacity: 0.72;
+}
+
+select.contact-input {
+  color: var(--foreground);
+}
+
+select.contact-input.is-placeholder {
+  color: var(--contact-input-placeholder);
+}
+
+select.contact-input option {
+  background: var(--contact-input-option-background);
+  color: var(--contact-input-option-foreground);
+}
