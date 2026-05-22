@@ -247,8 +247,7 @@ export function Contact() {
           </h2>
 
           <p className="mt-5 max-w-xl text-base leading-7 text-[var(--muted-foreground)]">
-            Have a website, WordPress, React or mobile app idea? Send me a
-            message and I&apos;ll get back to you.
+           Have a project in mind or need help with a website, e-commerce store, web application, or mobile app? I'd love to hear about your ideas and discuss how we can bring them to life.
           </p>
 
           <Suspense fallback={<div className="mt-8 min-h-[400px]" />}>

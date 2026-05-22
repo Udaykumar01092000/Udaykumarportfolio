@@ -111,8 +111,7 @@ export function Hero() {
           </h1>
 
           <p className="relative z-10 mt-5 max-w-xl text-lg leading-8 text-[var(--hero-copy)] sm:mt-8 sm:text-xl sm:leading-9">
-            I build modern React, Next.js and WordPress websites with clean UI,
-            smooth interactions and fast performance.
+           I build high-performance websites, e-commerce platforms, and web applications using WordPress, Next.js, React, React Native, and Node.js with a strong focus on speed, SEO, and exceptional user experience.
           </p>
 
           <div className="hero-actions relative z-10 mt-7 flex flex-wrap items-center gap-4 sm:mt-12 sm:gap-5">

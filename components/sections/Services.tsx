@@ -79,8 +79,7 @@ export function Services() {
           </h2>
 
           <p className="mx-auto mt-5 max-w-2xl text-base leading-7 text-[var(--muted-foreground)]">
-            Explore services designed to elevate online presence, improve user
-            experience and build practical digital solutions.
+            Delivering modern web, mobile, and e-commerce solutions that combine performance, functionality, and exceptional user experience.
           </p>
         </motion.div>
 

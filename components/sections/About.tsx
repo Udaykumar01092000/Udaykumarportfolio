@@ -14,7 +14,7 @@ const education = [
     title: "Bachelor of Computer Science",
     place: "New Nobel Degree College, Hyderabad",
     description:
-      "Specialized in BSc (MECs) and gained strong foundations in technology, communication and creative problem solving.",
+      "Developed strong foundations in computer science, mathematics, communication, analytical thinking, and problem-solving, supporting my growth as a full-stack web developer.",
   },
 ];
 
@@ -73,17 +73,11 @@ export function About() {
               </h3>
 
               <p className="mt-6 text-lg leading-8 text-[var(--muted-foreground)]">
-                Experienced web developer with over one year of hands-on
-                experience in designing and maintaining websites using
-                WordPress. Skilled in front-end development with expertise in
-                HTML, CSS, Bootstrap, JavaScript, WordPress and React.
+                Full Stack Developer specializing in WordPress, PHP Sage, Next.js, React, and modern web technologies. Experienced in building custom websites, e-commerce solutions, and scalable web applications with a focus on performance, SEO, and user experience.
               </p>
 
               <p className="mt-5 text-lg leading-8 text-[var(--muted-foreground)]">
-                From conceptualization to launch, adept at crafting
-                user-friendly digital solutions that meet client objectives and
-                exceed expectations. Proven ability to tackle complex web
-                development challenges with creativity and precision.
+                From planning to deployment, I deliver clean, maintainable, and business-focused digital solutions while solving complex development challenges with creativity and precision.
               </p>
 
               {/* Info */}

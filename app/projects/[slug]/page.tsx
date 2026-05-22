@@ -2,6 +2,9 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { ArrowLeft, ArrowUpRight, CalendarDays, MapPin, User2 } from "lucide-react";
 import { notFound } from "next/navigation";
+import type { ReactNode } from "react";
+import { HighlightedText } from "@/components/highlighted-text";
+import { ProjectGallery } from "@/components/project-gallery";
 import { ScrollToTopButton } from "@/components/scroll-to-top-button";
 import { ThemeToggle } from "@/components/theme-toggle";
 import { getProjectById, projects } from "@/data/projects";
@@ -34,6 +37,53 @@ export async function generateMetadata({
     title: `${project.title} | Uday Kumar`,
     description: project.summary,
   };
+}
+
+type ProjectActionButtonProps = {
+  href: string;
+  children: ReactNode;
+  isExternal?: boolean;
+  variant?: "filled" | "outline";
+};
+
+function ProjectActionButton({
+  href,
+  children,
+  isExternal = false,
+  variant = "outline",
+}: ProjectActionButtonProps) {
+  const isFilled = variant === "filled";
+
+  return (
+    <Link
+      href={href}
+      target={isExternal ? "_blank" : undefined}
+      rel={isExternal ? "noreferrer" : undefined}
+      className={`group relative inline-flex items-center gap-2 overflow-hidden rounded-full border px-6 py-3 text-sm font-bold shadow-[var(--section-card-shadow)] transition duration-300 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#8750f7]/35 ${
+        isFilled
+          ? "border-transparent bg-gradient-to-r from-[#8750f7] to-[#2a1454] !text-white shadow-[0_18px_40px_rgba(135,80,247,0.28)]"
+          : "border-[var(--header-border)] bg-transparent text-[var(--foreground)]"
+      }`}
+    >
+      <span
+        className={`absolute inset-0 origin-left scale-x-0 transition-transform duration-500 ease-[cubic-bezier(0.22,1,0.36,1)] group-hover:scale-x-100 ${
+          isFilled
+            ? "bg-gradient-to-r from-[#a679ff] to-[#6d38df]"
+            : "bg-gradient-to-r from-[#8750f7] to-[#2a1454]"
+        }`}
+      />
+      {isFilled ? (
+        <span className="absolute inset-0 opacity-0 transition duration-500 group-hover:opacity-100 bg-[linear-gradient(120deg,transparent_20%,rgba(255,255,255,0.18)_50%,transparent_80%)]" />
+      ) : null}
+      <span
+        className={`relative z-10 inline-flex items-center gap-2 transition-colors duration-300 ${
+          isFilled ? "text-white" : "group-hover:text-white"
+        }`}
+      >
+        {children}
+      </span>
+    </Link>
+  );
 }
 
 export default async function ProjectPage({ params }: ProjectPageProps) {
@@ -101,36 +151,33 @@ export default async function ProjectPage({ params }: ProjectPageProps) {
                       const isExternal = isExternalProjectLink(action.href);
 
                       return (
-                        <Link
+                        <ProjectActionButton
                           key={action.label}
                           href={action.href}
-                          target={isExternal ? "_blank" : undefined}
-                          rel={isExternal ? "noreferrer" : undefined}
-                          className="inline-flex items-center gap-2 rounded-full border border-[var(--header-border)] bg-[var(--surface-elevated)] px-6 py-3 text-sm font-bold text-[var(--foreground)] shadow-[var(--section-card-shadow)] transition hover:border-[#8750f7]/40 hover:text-[#8750f7]"
+                          isExternal={isExternal}
                         >
                           {action.label}
                           <ArrowUpRight size={16} />
-                        </Link>
+                        </ProjectActionButton>
                       );
                     })}
                   </div>
                 ) : null}
 
                 <div className="flex flex-wrap gap-3">
-                  <Link
+                  <ProjectActionButton
                     href={project.links.contact}
-                    className="inline-flex items-center gap-2 rounded-full bg-gradient-to-r from-[#8750f7] to-[#2a1454] px-6 py-3 text-sm font-bold !text-white shadow-[0_18px_40px_rgba(135,80,247,0.28)]"
+                    variant="filled"
                   >
                     Start Similar Project
                     <ArrowUpRight size={16} />
-                  </Link>
+                  </ProjectActionButton>
 
-                  <Link
+                  <ProjectActionButton
                     href="/#contact"
-                    className="inline-flex items-center gap-2 rounded-full border border-[var(--header-border)] bg-[var(--surface-elevated)] px-6 py-3 text-sm font-bold text-[var(--foreground)] shadow-[var(--section-card-shadow)]"
                   >
                     Contact Me
-                  </Link>
+                  </ProjectActionButton>
                 </div>
               </div>
 
@@ -173,13 +220,7 @@ export default async function ProjectPage({ params }: ProjectPageProps) {
               </div>
             </div>
 
-            <div className="rounded-[32px] bg-[var(--section-accent-surface)] p-4 shadow-[var(--section-card-shadow)] sm:p-5">
-              <img
-                src={project.image}
-                alt={project.title}
-                className="w-full rounded-[26px] object-cover shadow-[var(--section-accent-shadow)]"
-              />
-            </div>
+            <ProjectGallery images={project.images} title={project.title} />
           </div>
 
           <div className="mt-14 grid gap-8 lg:grid-cols-[1.12fr_0.88fr]">
@@ -189,7 +230,10 @@ export default async function ProjectPage({ params }: ProjectPageProps) {
                   Project Overview
                 </p>
                 <p className="mt-5 text-base leading-8 text-[var(--muted-foreground)]">
-                  {project.summary}
+                  <HighlightedText
+                    text={project.summary}
+                    highlights={project.summaryHighlights}
+                  />
                 </p>
               </div>
 
@@ -198,7 +242,10 @@ export default async function ProjectPage({ params }: ProjectPageProps) {
                   The Challenge
                 </p>
                 <p className="mt-5 text-base leading-8 text-[var(--muted-foreground)]">
-                  {project.challenge}
+                  <HighlightedText
+                    text={project.challenge}
+                    highlights={project.challengeHighlights}
+                  />
                 </p>
               </div>
 

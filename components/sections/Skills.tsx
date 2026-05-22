@@ -59,8 +59,7 @@ export function Skills() {
         </motion.h2>
 
         <p className="mx-auto mt-5 max-w-2xl text-base leading-7 text-[var(--muted-foreground)]">
-          Technologies I use to build responsive websites, modern interfaces and
-          custom WordPress solutions.
+          Expertise in WordPress, PHP Sage, React, Next.js, React Native, JavaScript, and modern development tools for building scalable digital products.
         </p>
 
         <div className="mt-14 grid grid-cols-2 gap-6 sm:grid-cols-3 lg:grid-cols-6">

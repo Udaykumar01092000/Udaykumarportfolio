@@ -9,6 +9,7 @@ import {
 } from "framer-motion";
 import { ArrowUpRight } from "lucide-react";
 import { startTransition, useState } from "react";
+import { HighlightedText } from "@/components/highlighted-text";
 import { projects } from "@/data/projects";
 
 const filters = ["All", "WordPress", "React", "Apps"] as const;
@@ -91,7 +92,7 @@ function ProjectCard({
       />
 
       <motion.img
-        src={project.image}
+        src={project.images[0]}
         alt={project.title}
         animate={{ scale: [1, 1.035, 1] }}
         transition={{
@@ -114,7 +115,10 @@ function ProjectCard({
             </h3>
 
             <p className="mt-2 text-sm leading-6 text-white/85 sm:text-base sm:leading-7">
-              {project.summary}
+              <HighlightedText
+                text={project.summary}
+                highlights={project.summaryHighlights}
+              />
             </p>
           </div>
 
@@ -149,12 +153,11 @@ export function Portfolio() {
           </p>
 
           <h2 className="mt-4 bg-gradient-to-r from-[#8750f7] to-[#2a1454] bg-clip-text text-3xl font-black text-transparent sm:text-5xl">
-            My Recent Works
+            Featured Projects
           </h2>
 
           <p className="mt-6 text-lg leading-8 text-[var(--muted-foreground)]">
-            A showcase of WordPress, React and mobile app projects with clean
-            UI, smooth interactions and practical development work.
+            Explore selected projects showcasing custom WordPress & Sage development, React and Next.js applications, e-commerce solutions, and mobile experiences built with a focus on performance, usability, and business impact.
           </p>
         </div>
 
