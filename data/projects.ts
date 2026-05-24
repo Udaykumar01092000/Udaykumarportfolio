@@ -137,134 +137,7 @@ export const projects: Project[] = [
     app: "https://play.google.com/store/apps/details?id=com.mycompany.vaartha&pcampaignid=web_share",
     contact: "/#contact",
   },
-},
-  {
-    id: "restorn",
-    title: "Restorn",
-    category: "React",
-    year: "2025",
-    images: ["/projects/restornlogo.png", "/projects/restorn2.png", "/projects/restorn3.png"],
-    client: "Swiggy Clone Concept",
-    duration: "6 Weeks",
-    role: "Frontend Developer",
-    location: "Remote",
-    summary:
-    "A responsive Swiggy clone built with React JS, featuring restaurant discovery, dish search, filtering and cart functionality using live API data.",
-    summaryHighlights: [
-      "responsive Swiggy clone",
-      "React JS",
-      "restaurant discovery",
-      "dish search",
-      "cart functionality",
-      "live API data",
-    ],
-     intro:
-      "This project is a modern Swiggy-inspired food delivery interface where I redesigned the complete UI using React JS, CSS and Bootstrap while integrating restaurant and food APIs for dynamic content.",
-    challenge:
-      "The main challenge was handling dynamic API data smoothly while creating a responsive and clean user experience for restaurant browsing, food search and cart interactions across all devices.",
-    solution:
-      "I built a modular React application with responsive layouts, restaurant and dish search features, location-based restaurant filtering and cart management using React Redux for smooth state handling.",
-    results: [
-      "Integrated Swiggy-style APIs for dynamic restaurant and food data.",
-      "Implemented restaurant and dish search functionality.",
-      "Built location-based restaurant filtering experience.",
-      "Added cart functionality using React Redux state management.",
-      "Created a fully responsive UI for mobile and desktop devices.",
-    ],
-    stack: ["HTML", "CSS", "Bootstrap", "JavaScript", "React JS", "React Redux", "Responsive Design"],
-    links: {
-      demo: "https://restorn.netlify.app/",
-      contact: "/#contact",
-    },
   },
-  {
-    id: "reader-app",
-    title: "Vaartha Digital Mobile App",
-    category: "Apps",
-    year: "2026",
-    images: [ "/vaartha_mobile2.png","/vaartha_mobile1.png", "/projects/vaartha.png"],
-    client: "Digital News Readers",
-    duration: "1 Weeks",
-    role: "React Native Developer",
-    location: "Hyderabad",
-    summary:
-      "React Native Android app for readers using WordPress REST APIs for dynamic content delivery.",
-    summaryHighlights: [
-      "React Native Android app",
-      "WordPress REST APIs",
-      "dynamic content delivery",
-    ],
-    intro:
-      "A mobile-first reading experience designed to surface fresh stories quickly and deliver WordPress content cleanly on Android devices.",
-    challenge:
-      "The app needed to pull dynamic news data from WordPress while keeping reading, navigation and updates smooth for users on mobile networks.",
-    solution:
-      "I integrated WordPress REST APIs with a React Native app structure, organized reader-friendly screens and focused on content access, responsiveness and reliable data flow.",
-    results: [
-      "Dynamic content delivery from WordPress into mobile screens.",
-      "Simpler article browsing and reader-focused navigation.",
-      "Mobile-ready structure for future feature expansion.",
-      "Consistent UI flow tailored to Android readers.",
-    ],
-    stack: ["React Native", "WordPress REST API", "JavaScript", "Android"],
-    links: {
-      app: "https://play.google.com/store/apps/details?id=com.mycompany.vaartha&pcampaignid=web_share",
-      contact: "/#contact",
-      },
-  },
-
-  {
-    id: "eleven-cricket",
-    title: "Eleven Cricket",
-    category: "WordPress",
-    year: "2024",
-    images: [
-      "/projects/elevencricket-1.webp"
-    ],
-    client: "Eleven Cricket via iBridge Digital",
-    duration: "2-3 Weeks",
-    role: "Web Designer & Frontend Developer at iBridge Digital",
-    location: "Remote",
-    summary:
-      "A complete cricket e-commerce website delivered for an iBridge Digital client, built for browsing and purchasing cricket equipment, jerseys and accessories with categorized product management, WooCommerce integration and WhatsApp customer support.",
-    summaryHighlights: [
-      "Multi-category cricket e-commerce platform",
-      "Bats, pads, gloves, jerseys and accessories management",
-      "WooCommerce and WhatsApp integration",
-    ],
-    intro:
-      "Eleven Cricket was redesigned and developed while I was working at iBridge Digital for a client in the cricket equipment space. The platform was built as a modern e-commerce website where users can explore and purchase products from various brands through organized categories, responsive product pages, WooCommerce shopping functionality and direct WhatsApp communication support.",
-    challenge:
-      "The project required transforming the existing website into a professional online cricket store capable of handling multiple product categories, brand-based product browsing, responsive shopping experiences and seamless customer communication while maintaining a clean and modern UI.",
-    solution:
-      "While working at iBridge Digital, I redesigned the complete website using WordPress and customized the frontend using HTML, CSS and JavaScript. WooCommerce was integrated for e-commerce operations including product listings, cart management and checkout functionality. Products were organized into categories such as bats, pads, gloves, jerseys, cricket balls and accessories from multiple brands to improve browsing and purchasing experiences.",
-    results: [
-      "Built a complete cricket e-commerce shopping experience.",
-      "Created categorized product sections for bats, pads, gloves, jerseys, balls and accessories.",
-      "Implemented multi-brand product browsing and management.",
-      "Integrated WooCommerce for cart, checkout and product handling.",
-      "Added WhatsApp integration for direct customer inquiries and support.",
-      "Improved navigation structure and product discoverability.",
-      "Designed responsive layouts optimized for mobile and desktop users.",
-      "Enhanced overall website appearance with modern UI styling and layouts.",
-      "Expanded website content with additional product and informational pages.",
-      "Improved customer engagement and online visibility for the business.",
-    ],
-    stack: [
-      "HTML",
-      "CSS",
-      "JavaScript",
-      "WordPress",
-      "WooCommerce",
-      "WhatsApp API",
-      "Responsive Design"
-    ],
-    links: {
-      demo: "https://elevencricket.com/",
-      contact: "/#contact",
-    },
-  },
-
   { 
     id: "uhq-adda-mobile-app",
     title: "UHQ Adda Mobile App",
@@ -331,6 +204,131 @@ export const projects: Project[] = [
     ],
 
     links: {
+      contact: "/#contact",
+    },
+  },
+  {
+    id: "reader-app",
+    title: "Vaartha Digital Mobile App",
+    category: "Apps",
+    year: "2026",
+    images: [ "/vaartha_mobile2.png","/vaartha_mobile1.png", "/projects/vaartha.png"],
+    client: "Digital News Readers",
+    duration: "1 Weeks",
+    role: "React Native Developer",
+    location: "Hyderabad",
+    summary:
+      "React Native Android app for readers using WordPress REST APIs for dynamic content delivery.",
+    summaryHighlights: [
+      "React Native Android app",
+      "WordPress REST APIs",
+      "dynamic content delivery",
+    ],
+    intro:
+      "A mobile-first reading experience designed to surface fresh stories quickly and deliver WordPress content cleanly on Android devices.",
+    challenge:
+      "The app needed to pull dynamic news data from WordPress while keeping reading, navigation and updates smooth for users on mobile networks.",
+    solution:
+      "I integrated WordPress REST APIs with a React Native app structure, organized reader-friendly screens and focused on content access, responsiveness and reliable data flow.",
+    results: [
+      "Dynamic content delivery from WordPress into mobile screens.",
+      "Simpler article browsing and reader-focused navigation.",
+      "Mobile-ready structure for future feature expansion.",
+      "Consistent UI flow tailored to Android readers.",
+    ],
+    stack: ["React Native", "WordPress REST API", "JavaScript", "Android"],
+    links: {
+      app: "https://play.google.com/store/apps/details?id=com.mycompany.vaartha&pcampaignid=web_share",
+      contact: "/#contact",
+      },
+  },
+{
+    id: "restorn",
+    title: "Restorn",
+    category: "React",
+    year: "2025",
+    images: ["/projects/restornlogo.png", "/projects/restorn2.png", "/projects/restorn3.png"],
+    client: "Swiggy Clone Concept",
+    duration: "6 Weeks",
+    role: "Frontend Developer",
+    location: "Remote",
+    summary:
+    "A responsive Swiggy clone built with React JS, featuring restaurant discovery, dish search, filtering and cart functionality using live API data.",
+    summaryHighlights: [
+      "responsive Swiggy clone",
+      "React JS",
+      "restaurant discovery",
+      "dish search",
+      "cart functionality",
+      "live API data",
+    ],
+     intro:
+      "This project is a modern Swiggy-inspired food delivery interface where I redesigned the complete UI using React JS, CSS and Bootstrap while integrating restaurant and food APIs for dynamic content.",
+    challenge:
+      "The main challenge was handling dynamic API data smoothly while creating a responsive and clean user experience for restaurant browsing, food search and cart interactions across all devices.",
+    solution:
+      "I built a modular React application with responsive layouts, restaurant and dish search features, location-based restaurant filtering and cart management using React Redux for smooth state handling.",
+    results: [
+      "Integrated Swiggy-style APIs for dynamic restaurant and food data.",
+      "Implemented restaurant and dish search functionality.",
+      "Built location-based restaurant filtering experience.",
+      "Added cart functionality using React Redux state management.",
+      "Created a fully responsive UI for mobile and desktop devices.",
+    ],
+    stack: ["HTML", "CSS", "Bootstrap", "JavaScript", "React JS", "React Redux", "Responsive Design"],
+    links: {
+      demo: "https://restorn.netlify.app/",
+      contact: "/#contact",
+    },
+  },
+  {
+    id: "eleven-cricket",
+    title: "Eleven Cricket",
+    category: "WordPress",
+    year: "2024",
+    images: [
+      "/projects/elevencricket-1.webp"
+    ],
+    client: "Eleven Cricket via iBridge Digital",
+    duration: "2-3 Weeks",
+    role: "Web Designer & Frontend Developer at iBridge Digital",
+    location: "Remote",
+    summary:
+      "A complete cricket e-commerce website delivered for an iBridge Digital client, built for browsing and purchasing cricket equipment, jerseys and accessories with categorized product management, WooCommerce integration and WhatsApp customer support.",
+    summaryHighlights: [
+      "Multi-category cricket e-commerce platform",
+      "Bats, pads, gloves, jerseys and accessories management",
+      "WooCommerce and WhatsApp integration",
+    ],
+    intro:
+      "Eleven Cricket was redesigned and developed while I was working at iBridge Digital for a client in the cricket equipment space. The platform was built as a modern e-commerce website where users can explore and purchase products from various brands through organized categories, responsive product pages, WooCommerce shopping functionality and direct WhatsApp communication support.",
+    challenge:
+      "The project required transforming the existing website into a professional online cricket store capable of handling multiple product categories, brand-based product browsing, responsive shopping experiences and seamless customer communication while maintaining a clean and modern UI.",
+    solution:
+      "While working at iBridge Digital, I redesigned the complete website using WordPress and customized the frontend using HTML, CSS and JavaScript. WooCommerce was integrated for e-commerce operations including product listings, cart management and checkout functionality. Products were organized into categories such as bats, pads, gloves, jerseys, cricket balls and accessories from multiple brands to improve browsing and purchasing experiences.",
+    results: [
+      "Built a complete cricket e-commerce shopping experience.",
+      "Created categorized product sections for bats, pads, gloves, jerseys, balls and accessories.",
+      "Implemented multi-brand product browsing and management.",
+      "Integrated WooCommerce for cart, checkout and product handling.",
+      "Added WhatsApp integration for direct customer inquiries and support.",
+      "Improved navigation structure and product discoverability.",
+      "Designed responsive layouts optimized for mobile and desktop users.",
+      "Enhanced overall website appearance with modern UI styling and layouts.",
+      "Expanded website content with additional product and informational pages.",
+      "Improved customer engagement and online visibility for the business.",
+    ],
+    stack: [
+      "HTML",
+      "CSS",
+      "JavaScript",
+      "WordPress",
+      "WooCommerce",
+      "WhatsApp API",
+      "Responsive Design"
+    ],
+    links: {
+      demo: "https://elevencricket.com/",
       contact: "/#contact",
     },
   },
@@ -401,7 +399,7 @@ export const projects: Project[] = [
     demo: "https://movieflxbinge.netlify.app/",
     contact: "/#contact",
   },
-}
+  }
 ];
 
 export function getProjectById(id: string) {
