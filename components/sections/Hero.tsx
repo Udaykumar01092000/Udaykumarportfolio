@@ -116,7 +116,7 @@ export function Hero() {
 
           <div className="hero-actions relative z-10 mt-7 flex flex-wrap items-center gap-4 sm:mt-12 sm:gap-5">
             <a
-              href="/Uday-Kumar-CV.pdf"
+              href="/udaykumarcv.pdf"
               className="download-cta group inline-flex items-center gap-3 rounded-full border border-[var(--hero-action-border)] bg-[var(--hero-action-background)] px-8 py-4 text-sm font-bold tracking-[0.12em] text-[#8750f7] shadow-[var(--hero-action-shadow)] transition-all duration-300 hover:bg-[#8750f7] hover:!text-white"
             >
               Download CV
