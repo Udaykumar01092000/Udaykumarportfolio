@@ -281,57 +281,57 @@ export const projects: Project[] = [
       contact: "/#contact",
     },
   },
-  {
-    id: "eleven-cricket",
-    title: "Eleven Cricket",
-    category: "WordPress",
-    year: "2024",
-    images: [
-      "/projects/elevencricket-1.webp"
-    ],
-    client: "Eleven Cricket via iBridge Digital",
-    duration: "2-3 Weeks",
-    role: "Web Designer & Frontend Developer at iBridge Digital",
-    location: "Remote",
-    summary:
-      "A complete cricket e-commerce website delivered for an iBridge Digital client, built for browsing and purchasing cricket equipment, jerseys and accessories with categorized product management, WooCommerce integration and WhatsApp customer support.",
-    summaryHighlights: [
-      "Multi-category cricket e-commerce platform",
-      "Bats, pads, gloves, jerseys and accessories management",
-      "WooCommerce and WhatsApp integration",
-    ],
-    intro:
-      "Eleven Cricket was redesigned and developed while I was working at iBridge Digital for a client in the cricket equipment space. The platform was built as a modern e-commerce website where users can explore and purchase products from various brands through organized categories, responsive product pages, WooCommerce shopping functionality and direct WhatsApp communication support.",
-    challenge:
-      "The project required transforming the existing website into a professional online cricket store capable of handling multiple product categories, brand-based product browsing, responsive shopping experiences and seamless customer communication while maintaining a clean and modern UI.",
-    solution:
-      "While working at iBridge Digital, I redesigned the complete website using WordPress and customized the frontend using HTML, CSS and JavaScript. WooCommerce was integrated for e-commerce operations including product listings, cart management and checkout functionality. Products were organized into categories such as bats, pads, gloves, jerseys, cricket balls and accessories from multiple brands to improve browsing and purchasing experiences.",
-    results: [
-      "Built a complete cricket e-commerce shopping experience.",
-      "Created categorized product sections for bats, pads, gloves, jerseys, balls and accessories.",
-      "Implemented multi-brand product browsing and management.",
-      "Integrated WooCommerce for cart, checkout and product handling.",
-      "Added WhatsApp integration for direct customer inquiries and support.",
-      "Improved navigation structure and product discoverability.",
-      "Designed responsive layouts optimized for mobile and desktop users.",
-      "Enhanced overall website appearance with modern UI styling and layouts.",
-      "Expanded website content with additional product and informational pages.",
-      "Improved customer engagement and online visibility for the business.",
-    ],
-    stack: [
-      "HTML",
-      "CSS",
-      "JavaScript",
-      "WordPress",
-      "WooCommerce",
-      "WhatsApp API",
-      "Responsive Design"
-    ],
-    links: {
-      demo: "https://elevencricket.com/",
-      contact: "/#contact",
-    },
-  },
+  // {
+  //   id: "eleven-cricket",
+  //   title: "Eleven Cricket",
+  //   category: "WordPress",
+  //   year: "2024",
+  //   images: [
+  //     "/projects/elevencricket-1.webp"
+  //   ],
+  //   client: "Eleven Cricket via iBridge Digital",
+  //   duration: "2-3 Weeks",
+  //   role: "Web Designer & Frontend Developer at iBridge Digital",
+  //   location: "Remote",
+  //   summary:
+  //     "A complete cricket e-commerce website delivered for an iBridge Digital client, built for browsing and purchasing cricket equipment, jerseys and accessories with categorized product management, WooCommerce integration and WhatsApp customer support.",
+  //   summaryHighlights: [
+  //     "Multi-category cricket e-commerce platform",
+  //     "Bats, pads, gloves, jerseys and accessories management",
+  //     "WooCommerce and WhatsApp integration",
+  //   ],
+  //   intro:
+  //     "Eleven Cricket was redesigned and developed while I was working at iBridge Digital for a client in the cricket equipment space. The platform was built as a modern e-commerce website where users can explore and purchase products from various brands through organized categories, responsive product pages, WooCommerce shopping functionality and direct WhatsApp communication support.",
+  //   challenge:
+  //     "The project required transforming the existing website into a professional online cricket store capable of handling multiple product categories, brand-based product browsing, responsive shopping experiences and seamless customer communication while maintaining a clean and modern UI.",
+  //   solution:
+  //     "While working at iBridge Digital, I redesigned the complete website using WordPress and customized the frontend using HTML, CSS and JavaScript. WooCommerce was integrated for e-commerce operations including product listings, cart management and checkout functionality. Products were organized into categories such as bats, pads, gloves, jerseys, cricket balls and accessories from multiple brands to improve browsing and purchasing experiences.",
+  //   results: [
+  //     "Built a complete cricket e-commerce shopping experience.",
+  //     "Created categorized product sections for bats, pads, gloves, jerseys, balls and accessories.",
+  //     "Implemented multi-brand product browsing and management.",
+  //     "Integrated WooCommerce for cart, checkout and product handling.",
+  //     "Added WhatsApp integration for direct customer inquiries and support.",
+  //     "Improved navigation structure and product discoverability.",
+  //     "Designed responsive layouts optimized for mobile and desktop users.",
+  //     "Enhanced overall website appearance with modern UI styling and layouts.",
+  //     "Expanded website content with additional product and informational pages.",
+  //     "Improved customer engagement and online visibility for the business.",
+  //   ],
+  //   stack: [
+  //     "HTML",
+  //     "CSS",
+  //     "JavaScript",
+  //     "WordPress",
+  //     "WooCommerce",
+  //     "WhatsApp API",
+  //     "Responsive Design"
+  //   ],
+  //   links: {
+  //     demo: "https://elevencricket.com/",
+  //     contact: "/#contact",
+  //   },
+  // },
 
   {
   id: "movie-flex",

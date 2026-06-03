@@ -114,9 +114,14 @@ export async function POST(request: Request) {
     .map(([name]) => name);
 
   if (!Number.isFinite(smtpPort) || missingConfig.length > 0) {
+    const deploymentHint = process.env.NETLIFY
+      ? "Set these variables in Netlify Site configuration > Environment variables with Functions scope, then trigger a new deploy."
+      : "Set the missing SMTP variables in your server environment and restart the app.";
+
     console.error("Contact form SMTP configuration is incomplete.", {
       missingConfig,
       smtpPort,
+      deploymentHint,
     });
 
     return NextResponse.json(

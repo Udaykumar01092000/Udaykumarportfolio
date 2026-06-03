@@ -41,6 +41,19 @@ CONTACT_FORM_TO_EMAIL=udaykumar.77348@gmail.com
 CONTACT_FORM_FROM_EMAIL=your-email@gmail.com
 ```
 
+### Netlify production setup
+
+If the live site shows `The contact form is not configured yet. Please try again later.`, the API route is running but one or more SMTP variables are missing in production.
+
+1. Open your site in Netlify.
+2. Go to `Site configuration` -> `Environment variables`.
+3. Add the same variables you use in `.env.local`:
+   `SMTP_HOST`, `SMTP_PORT`, `SMTP_SECURE`, `SMTP_USER`, `SMTP_PASS`, `CONTACT_FORM_TO_EMAIL`, and `CONTACT_FORM_FROM_EMAIL`.
+4. Make sure the variable scope includes `Functions`.
+5. Trigger a fresh deploy after saving the variables.
+
+`.env.local` only works on your local machine. Netlify does not automatically read that file from your computer for deployed functions.
+
 ## Learn More
 
 To learn more about Next.js, take a look at the following resources:

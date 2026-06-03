@@ -20,8 +20,8 @@ const resume = [
   },
   {
     role: "WordPress Developer",
-    period: "2022 - 2023",
-    company: "iBridge Digital",
+    period: "2022 – 2024",
+    company: "Honey Soft Technologies",
     location: "Hyderabad",
     points: [
       "Designed, developed, and maintained WordPress websites for diverse client requirements.",
