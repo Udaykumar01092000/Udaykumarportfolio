@@ -69,10 +69,10 @@ function TwitterIcon({ size = 17 }: { size?: number }) {
 }
 
 export function Hero() {
-  const profileImageSrc = "/myprofile.png";
+  const profileImageSrc = "/myprofile_2.png";
 
   return (
-    <section className="relative flex min-h-[calc(100svh-6rem)] w-full items-center overflow-hidden bg-[var(--hero-section-background)] pt-10 sm:min-h-[calc(100svh-7rem)] sm:pt-12 lg:min-h-screen lg:pt-0">
+    <section className="relative flex min-h-[calc(100svh-6rem)] w-full items-center overflow-hidden bg-[var(--hero-section-background)] pt-10 pb-16 sm:min-h-[calc(100svh-7rem)] sm:pt-12 sm:pb-20 lg:min-h-screen lg:pt-0 lg:pb-0">
       <ParticlesBackground />
       {/* Soft purple glow */}
       <div className="absolute right-0 top-0 h-[520px] w-[520px] rounded-full bg-[#8750f7]/20 blur-[120px]" />
@@ -111,7 +111,7 @@ export function Hero() {
           </h1>
 
           <p className="relative z-10 mt-5 max-w-xl text-lg leading-8 text-[var(--hero-copy)] sm:mt-8 sm:text-xl sm:leading-9">
-           I build high-performance websites, e-commerce platforms, and web applications using WordPress, Next.js, React, React Native, and Node.js with a strong focus on speed, SEO, and exceptional user experience.
+            I build high-performance websites, e-commerce platforms, and web applications using WordPress, Next.js, React, React Native, and Node.js with a strong focus on speed, SEO, and exceptional user experience.
           </p>
 
           <div className="hero-actions relative z-10 mt-7 flex flex-wrap items-center gap-4 sm:mt-12 sm:gap-5">
@@ -151,7 +151,7 @@ export function Hero() {
           transition={{ duration: 0.9 }}
           className="flex justify-center lg:justify-end"
         >
-          <div className="relative h-[360px] w-[330px] overflow-hidden rounded-[32px] border-2 border-[var(--hero-frame)] bg-[var(--hero-card-background)] shadow-[0_30px_80px_rgba(135,80,247,0.25)] transition duration-500 hover:rotate-0 sm:h-[460px] sm:w-[430px]">
+          <div className="relative h-[360px] max-w-[330px] w-full overflow-hidden rounded-[32px] border-2 border-[var(--hero-frame)] bg-[var(--hero-card-background)] shadow-[0_30px_80px_rgba(135,80,247,0.25)] transition duration-500 hover:rotate-0 sm:h-[460px] sm:max-w-[430px]">
             <img
               src={profileImageSrc}
               alt="Uday Kumar"
