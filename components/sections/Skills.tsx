@@ -1,6 +1,6 @@
 "use client";
 
-import { motion } from "framer-motion";
+import { ScrollReveal, StaggerContainer, StaggerItem } from "@/components/ScrollAnimations";
 
 const skills = [
   {
@@ -49,27 +49,20 @@ export function Skills() {
       <div className="absolute left-0 top-20 h-[380px] w-[380px] rounded-full bg-[#8750f7]/10 blur-[120px]" />
 
       <div className="mx-auto max-w-7xl px-4 text-center sm:px-6 lg:px-8">
-        <motion.h2
-          initial={{ opacity: 0, y: 35 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          className="text-4xl font-black text-[#8750f7] sm:text-5xl"
-        >
-          My Skills
-        </motion.h2>
+        <ScrollReveal distance={30} duration={0.6}>
+          <h2 className="text-4xl font-black text-[#8750f7] sm:text-5xl">
+            My Skills
+          </h2>
+        </ScrollReveal>
 
         <p className="mx-auto mt-5 max-w-2xl text-base leading-7 text-[var(--muted-foreground)]">
           Expertise in WordPress, PHP Sage, React, Next.js, React Native, JavaScript, and modern development tools for building scalable digital products.
         </p>
 
-        <div className="mt-14 grid grid-cols-2 gap-6 sm:grid-cols-3 lg:grid-cols-6">
-          {skills.map((skill, index) => (
-            <motion.div
+        <StaggerContainer stagger={0.08} className="mt-14 grid grid-cols-2 gap-6 sm:grid-cols-3 lg:grid-cols-6">
+          {skills.map((skill) => (
+            <StaggerItem
               key={skill.name}
-              initial={{ opacity: 0, y: 35 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ delay: index * 0.08, duration: 0.6 }}
               className="group"
             >
               <div className="rounded-[22px] border border-[var(--skills-card-border)] bg-[var(--skills-card-surface)] p-8 shadow-[var(--section-card-shadow)] transition-all duration-500 group-hover:-translate-y-2 group-hover:border-[#8750f7]/45 group-hover:bg-[#2a1454] group-hover:shadow-[var(--section-accent-shadow)]">
@@ -87,9 +80,9 @@ export function Skills() {
               <p className="mt-6 text-base font-medium text-[#8750f7]">
                 {skill.name}
               </p>
-            </motion.div>
+            </StaggerItem>
           ))}
-        </div>
+        </StaggerContainer>
       </div>
     </section>
   );

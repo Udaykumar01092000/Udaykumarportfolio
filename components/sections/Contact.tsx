@@ -3,6 +3,7 @@
 import { motion } from "framer-motion";
 import { Mail, MapPin, Phone } from "lucide-react";
 import { useToast } from "@/components/toast-provider";
+import { ScrollScale } from "@/components/ScrollAnimations";
 import "@/styles/contact.css";
 import {
   type ChangeEvent,
@@ -236,6 +237,7 @@ export function Contact() {
       <div className="absolute right-0 top-16 h-[420px] w-[420px] rounded-full bg-[#8750f7]/10 blur-[130px]" />
 
       <div className="relative z-10 mx-auto grid max-w-7xl gap-14 px-4 sm:px-6 lg:grid-cols-[1.1fr_0.9fr] lg:px-8">
+        <ScrollScale fromScale={0.92}>
         <motion.div
           initial={{ opacity: 0, x: -35 }}
           whileInView={{ opacity: 1, x: 0 }}
@@ -254,7 +256,9 @@ export function Contact() {
             <ContactForm />
           </Suspense>
         </motion.div>
+        </ScrollScale>
 
+        <ScrollScale fromScale={0.92}>
         <motion.div
           initial={{ opacity: 0, x: 35 }}
           whileInView={{ opacity: 1, x: 0 }}
@@ -292,6 +296,7 @@ export function Contact() {
             />
           </div>
         </motion.div>
+        </ScrollScale>
       </div>
     </section>
   );

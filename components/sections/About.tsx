@@ -1,12 +1,12 @@
 "use client";
 
-import { motion } from "framer-motion";
 import {
   Mail,
   Phone,
   MapPin,
   GraduationCap,
 } from "lucide-react";
+import { ScrollReveal, ScrollScale, ParallaxLayer } from "@/components/ScrollAnimations";
 
 const education = [
   {
@@ -47,25 +47,14 @@ export function About() {
 
       <div className="relative z-10 mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         {/* Heading */}
-        <motion.div
-          initial={{ opacity: 0, y: 35 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.7 }}
-          className="mb-16"
-        >
+        <ScrollReveal distance={30} duration={0.6} className="mb-16">
           <h2 className="bg-gradient-to-r from-[#8750f7] to-[#2a1454] bg-clip-text text-5xl font-black text-transparent">
             About Me
           </h2>
-        </motion.div>
+        </ScrollReveal>
 
         <div className="grid gap-8 lg:grid-cols-2 lg:items-start">
-          <motion.div
-            initial={{ opacity: 0, x: -30 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.7 }}
-          >
+          <ScrollScale fromScale={0.92}>
             {/* Summary */}
             <div className="h-full rounded-[32px] bg-[var(--surface-elevated)] p-6 shadow-[var(--section-card-shadow)] backdrop-blur-xl sm:p-8">
               <h3 className="text-4xl font-black text-[var(--foreground)]">
@@ -108,14 +97,10 @@ export function About() {
                 })}
               </div>
             </div>
-          </motion.div>
+          </ScrollScale>
 
-          <motion.div
-            initial={{ opacity: 0, x: 30 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.7 }}
-          >
+          <ScrollScale fromScale={0.92}>
+            <ParallaxLayer speed={20}>
             <div className="h-full rounded-[32px] bg-[var(--section-accent-surface)] p-6 shadow-[var(--section-card-shadow)] !sm:p-0">
               <div className="mb-8 flex items-center gap-4">
                 <GraduationCap
@@ -153,7 +138,8 @@ export function About() {
                 ))}
               </div>
             </div>
-          </motion.div>
+            </ParallaxLayer>
+          </ScrollScale>
         </div>
       </div>
     </section>

@@ -1,6 +1,6 @@
 "use client";
 
-import { motion } from "framer-motion";
+import { ScrollScale } from "@/components/ScrollAnimations";
 import { BriefcaseBusiness } from "lucide-react";
 
 const resume = [
@@ -52,12 +52,9 @@ export function Resume() {
 
         <div className="relative border-l-2 border-[var(--timeline-line)] pl-5 sm:pl-8">
           {resume.map((item, index) => (
-            <motion.div
+            <ScrollScale
               key={item.company}
-              initial={{ opacity: 0, y: 35 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ delay: index * 0.12, duration: 0.7 }}
+              fromScale={0.9}
               className="relative mb-10 last:mb-0"
             >
               <span className="absolute -left-[29px] top-7 h-4 w-4 rounded-full border-[3px] border-[var(--timeline-node-ring)] bg-[#8750f7] sm:-left-[43px] sm:top-8 sm:h-5 sm:w-5 sm:border-4" />
@@ -109,7 +106,7 @@ export function Resume() {
                   ))}
                 </ul>
               </div>
-            </motion.div>
+            </ScrollScale>
           ))}
         </div>
       </div>

@@ -4,6 +4,7 @@ import { LayoutGroup, motion } from "framer-motion";
 import { ArrowUpRight } from "lucide-react";
 import { useState } from "react";
 import { useRouter } from "next/navigation";
+import { ScrollReveal } from "@/components/ScrollAnimations";
 
 const services = [
   {
@@ -63,13 +64,7 @@ export function Services() {
       <div className="absolute left-1/2 top-20 h-[460px] w-[460px] -translate-x-1/2 rounded-full bg-[#8750f7]/10 blur-[130px]" />
 
       <div className="relative z-10 mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
-        <motion.div
-          initial={{ opacity: 0, y: 35 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.7 }}
-          className="mx-auto mb-14 max-w-3xl text-center sm:mb-16"
-        >
+        <ScrollReveal distance={30} duration={0.6} className="mx-auto mb-14 max-w-3xl text-center sm:mb-16">
           <p className="text-sm font-black uppercase tracking-[0.28em] text-[#8750f7]">
             Services
           </p>
@@ -81,7 +76,7 @@ export function Services() {
           <p className="mx-auto mt-5 max-w-2xl text-base leading-7 text-[var(--muted-foreground)]">
             Delivering modern web, mobile, and e-commerce solutions that combine performance, functionality, and exceptional user experience.
           </p>
-        </motion.div>
+        </ScrollReveal>
 
         <LayoutGroup id="services-list">
           <div className="border-y border-[var(--header-border)]">
