@@ -83,7 +83,7 @@ export const projects: Project[] = [
   images: ["/projects/vaartha.png"],
   client: "Vaartha Publications",
   duration: "Ongoing",
-  role: "WordPress & React Native Developer",
+  role: "WordPress & PHP Developer",
   location: "Hyderabad",
   summary:
     "Developed custom Sage-based WordPress platforms, custom plugins and a React Native mobile application integrated with WordPress APIs for Vaartha digital news platforms.",
@@ -130,6 +130,7 @@ export const projects: Project[] = [
     "HTML",
     "CSS",
     "MySQL",
+    "Tailwind CSS"
   ],
 
   links: {

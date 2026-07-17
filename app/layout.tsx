@@ -18,6 +18,17 @@ export default function RootLayout({
     <html lang="en" className="h-full antialiased" suppressHydrationWarning>
       <head>
         <ThemeScript />
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `
+              try {
+                if (typeof window !== 'undefined' && window.location.pathname !== '/') {
+                  sessionStorage.setItem('hasPlayedEntrance', 'true');
+                }
+              } catch (e) {}
+            `,
+          }}
+        />
       </head>
       <body
         className="min-h-full flex flex-col"
