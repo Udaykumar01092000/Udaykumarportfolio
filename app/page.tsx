@@ -11,6 +11,7 @@ import { Resume } from "@/components/sections/Resume";
 import { Skills } from "@/components/sections/Skills";
 import { Services } from "@/components/sections/Services";
 import { Contact } from "@/components/sections/Contact";
+import LetsHaveAChat from "@/components/letsHaveChat";
 import ScrollBar from "@/components/scroll_bar";
 import "@/styles/entrance.css";
 
@@ -59,6 +60,11 @@ export default function Home() {
           <Resume />
           <Skills />
           <Contact />
+          <LetsHaveAChat
+            label="Want to start a project?"
+            words={["Let’s", "have", "a", "chat"]}
+            email="udaykumar.77348@gmail.com"
+          />
         </main>
       </motion.div>
     </>
