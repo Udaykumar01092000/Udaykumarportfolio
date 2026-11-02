@@ -11,6 +11,7 @@ import { Resume } from "@/components/sections/Resume";
 import { Skills } from "@/components/sections/Skills";
 import { Services } from "@/components/sections/Services";
 import { Contact } from "@/components/sections/Contact";
+import ScrollBar from "@/components/scroll_bar";
 import "@/styles/entrance.css";
 
 export default function Home() {
@@ -51,6 +52,7 @@ export default function Home() {
         <SiteHeader />
         <main className="bg-[var(--hero-section-background)] pt-20 sm:pt-28 lg:pt-18">
           <Hero />
+          <ScrollBar duration={26} starDuration={4} />
           <About />
           <Services />
           <Portfolio />

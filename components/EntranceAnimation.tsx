@@ -347,14 +347,17 @@ function CodeTyping({
   const [visibleLines, setVisibleLines] = useState(0);
   const [currentLineChars, setCurrentLineChars] = useState(0);
 
+  
   useEffect(() => {
+    let typeInterval: ReturnType<typeof setInterval> | undefined;
+
     const startTimer = setTimeout(() => {
       let lineIndex = 0;
       let charIndex = 0;
 
-      const typeInterval = setInterval(() => {
+      typeInterval = setInterval(() => {
         if (lineIndex >= CODE_LINES.length) {
-          clearInterval(typeInterval);
+          if (typeInterval) clearInterval(typeInterval);
           return;
         }
 
@@ -368,12 +371,14 @@ function CodeTyping({
           setCurrentLineChars(0);
         }
       }, 28);
-
-      return () => clearInterval(typeInterval);
     }, startDelay);
 
-    return () => clearTimeout(startTimer);
+    return () => {
+      clearTimeout(startTimer);
+      if (typeInterval) clearInterval(typeInterval);
+    };
   }, [startDelay, CODE_LINES]);
+
 
   return (
     <motion.div
@@ -436,7 +441,7 @@ export function EntranceAnimation({
 
   /* Auto-advance after the animation plays */
   useEffect(() => {
-    const timer = setTimeout(handleExit, 4800);
+    const timer = setTimeout(handleExit, 6800);
     return () => clearTimeout(timer);
   }, [handleExit]);
 

@@ -1,7 +1,13 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { Mail, MapPin, Phone } from "lucide-react";
+import {
+  ArrowUpRight,
+  Mail,
+  MapPin,
+  Navigation,
+  Phone,
+} from "lucide-react";
 import { useToast } from "@/components/toast-provider";
 import { ScrollScale } from "@/components/ScrollAnimations";
 import "@/styles/contact.css";
@@ -286,15 +292,71 @@ export function Contact() {
             );
           })}
 
-          <div className="mt-4 overflow-hidden rounded-[28px] border border-[var(--header-border)] bg-[var(--surface-elevated)] shadow-[var(--section-card-shadow)]">
-            <iframe
-              title="Uppal Hyderabad Map"
-              src="https://www.google.com/maps?q=17.4015441,78.5681716&z=16&output=embed"
-              className="h-[260px] w-full border-0"
-              loading="lazy"
-              referrerPolicy="no-referrer-when-downgrade"
-            />
-          </div>
+         
+{/* Map card */}
+<div className="group mt-4 rounded-[28px] bg-gradient-to-br from-[#8750f7] via-[#5b32b4] to-[#2a1454] p-[2px] shadow-[0_24px_60px_rgba(135,80,247,0.3)] transition duration-500 hover:-translate-y-1 hover:shadow-[0_30px_70px_rgba(135,80,247,0.45)]">
+  <div className="relative overflow-hidden rounded-[26px] bg-[var(--surface-elevated)]">
+
+    {/* Map */}
+    <iframe
+      title="Uppal Hyderabad Map"
+      src="https://www.google.com/maps?q=17.4085259,78.5969635&z=17&output=embed"
+      className="h-[320px] w-full border-0 transition duration-500 [.dark_&]:[filter:invert(100%)_hue-rotate(180deg)_brightness(0.9)_contrast(0.95)_saturate(0.75)] [[data-theme=dark]_&]:[filter:invert(100%)_hue-rotate(180deg)_brightness(0.9)_contrast(0.95)_saturate(0.75)] [.dark_&]:group-hover:[filter:invert(100%)_hue-rotate(180deg)_brightness(1)_contrast(1)_saturate(0.9)] [[data-theme=dark]_&]:group-hover:[filter:invert(100%)_hue-rotate(180deg)_brightness(1)_contrast(1)_saturate(0.9)]"
+      loading="lazy"
+      referrerPolicy="no-referrer-when-downgrade"
+    />
+
+    {/* Light mode overlay */}
+    <div className="pointer-events-none absolute inset-0 bg-gradient-to-t from-[#2a1454]/35 via-transparent to-transparent [.dark_&]:hidden [[data-theme=dark]_&]:hidden" />
+
+    {/* Dark mode overlay */}
+    <div className="pointer-events-none absolute inset-0 hidden [.dark_&]:block [[data-theme=dark]_&]:block">
+      <div className="absolute inset-0 bg-gradient-to-t from-[#14082e]/70 via-[#8750f7]/10 to-[#14082e]/40 mix-blend-multiply transition-opacity duration-500 group-hover:opacity-60" />
+      <div className="absolute inset-0 shadow-[inset_0_0_80px_rgba(10,4,24,0.7)]" />
+    </div>
+
+    {/* Top chip */}
+    <div className="pointer-events-none absolute left-4 top-4 flex items-center gap-2 rounded-full border border-white/20 bg-black/40 px-4 py-2 text-xs font-semibold text-white backdrop-blur-md">
+      <span className="relative flex h-2.5 w-2.5">
+        <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-emerald-400 opacity-75" />
+        <span className="relative inline-flex h-2.5 w-2.5 rounded-full bg-emerald-400" />
+      </span>
+      Based in Hyderabad
+    </div>
+
+    {/* Bottom info panel */}
+    <div className="absolute inset-x-4 bottom-4 flex flex-col items-start gap-3 rounded-2xl border border-white/20 bg-black/45 p-4 text-white backdrop-blur-xl sm:flex-row sm:items-center sm:justify-between sm:gap-4">
+
+      <div className="flex items-center gap-3">
+        <span className="flex h-11 w-11 shrink-0 items-center justify-center rounded-full bg-gradient-to-r from-[#8750f7] to-[#2a1454]">
+          <MapPin size={20} />
+        </span>
+
+        <div>
+          <p className="text-sm font-bold leading-tight">
+            Uppal, Hyderabad
+          </p>
+          <p className="text-xs text-white/70">
+            Telangana, India
+          </p>
+        </div>
+      </div>
+
+      <a
+        href="https://www.google.com/maps/dir/?api=1&destination=17.4087664,78.5969017"
+        target="_blank"
+        rel="noopener noreferrer"
+        className="flex shrink-0 items-center gap-2 rounded-full bg-white px-4 py-2 text-xs font-bold !text-[#2a1454] transition duration-300 hover:scale-105 hover:bg-[#f1e9ff]"
+      >
+        <Navigation size={14} />
+        Directions
+        <ArrowUpRight size={14} />
+      </a>
+
+    </div>
+  </div>
+</div>
+
         </motion.div>
         </ScrollScale>
       </div>
